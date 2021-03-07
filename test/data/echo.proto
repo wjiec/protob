@@ -1,0 +1,11 @@
+syntax = "proto3";
+package hello.world;
+option go_package = "testdata";
+
+message Content {
+    string value = 1;
+}
+
+service EchoService {
+    rpc Echo(Content) returns (Content);
+}
